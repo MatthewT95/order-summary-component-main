@@ -9,6 +9,30 @@ body {
     background-size: 100% auto;
 }
 
+.order-summary-card{
+    width: 400px;
+    height: 700px;
+    border-radius: 30px;
+    border: solid;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+    "card-picture"
+    "card-title"
+    "promotion-msg"
+    "plan-options"
+    "payment-btn"
+    "cancel-btn";
+    overflow: hidden;
+}
+
+.card-image{
+    width: 100%;
+    height: auto;
+    grid-area: card-picture;
+}
+
 @media (max-width:600px)
 {
     body {
