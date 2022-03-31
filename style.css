@@ -10,27 +10,50 @@ body {
 }
 
 .order-summary-card{
-    width: 400px;
+    width: 450px;
     height: 700px;
     border-radius: 30px;
+    background-color: white;
     border: solid;
     display:grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 50px 1fr 50px;
     grid-template-rows: repeat(6,1fr);
     grid-template-areas: 
-    "card-picture"
-    "card-title"
-    "promotion-msg"
-    "plan-options"
-    "payment-btn"
-    "cancel-btn";
+    "card-picture card-picture card-picture"
+    ". card-title ."
+    ". promotion-msg ."
+    ". plan-options ."
+    ". payment-btn ."
+    ". cancel-btn .";
     overflow: hidden;
 }
 
 .card-image{
-    width: 100%;
-    height: auto;
     grid-area: card-picture;
+}
+
+.card-title{
+    grid-area: card-title;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.promo{
+    grid-area: promotion-msg;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.plan-card{
+    grid-area: plan-options;
+}
+
+.payment-btn{
+    grid-area: payment-btn;
+}
+
+.cancel-btn{
+    grid-area: cancel-btn;
 }
 
 @media (max-width:600px)
