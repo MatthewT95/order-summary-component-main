@@ -46,6 +46,35 @@ body {
 
 .plan-card{
     grid-area: plan-options;
+    display:grid;
+    padding: 10px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "Icon plan-name select-link"
+    "Icon plan-pricing select-link";
+    border-radius: 15px;
+    background-color: hsl(224, 23%, 55%);
+}
+
+.plan-card .plan-icon{
+    grid-area: Icon;
+    align-self: center;
+}
+
+.plan-card .plan-name{
+    grid-area: plan-name;
+    align-self: center;
+}
+
+.plan-card .plan-price{
+    grid-area: plan-pricing;
+    align-self: center;
+}
+
+.plan-card .plan-select{
+    grid-area: select-link;
+    align-self: center;
 }
 
 .payment-btn{
