@@ -1,3 +1,7 @@
+h1,p {
+    margin: 0;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -11,13 +15,13 @@ body {
 
 .order-summary-card{
     width: 450px;
-    height: 700px;
+    height: 600px;
     border-radius: 30px;
     background-color: white;
     border: solid;
     display:grid;
     grid-template-columns: 50px 1fr 50px;
-    grid-template-rows: repeat(6,1fr);
+    grid-template-rows: 250px 30px 1fr 80px 60px 60px;
     grid-template-areas: 
     "card-picture card-picture card-picture"
     ". card-title ."
@@ -25,7 +29,14 @@ body {
     ". plan-options ."
     ". payment-btn ."
     ". cancel-btn .";
+    grid-gap:10px;
     overflow: hidden;
+    font-family: "Red Hat Display";
+}
+
+.order-summary-card button{
+    outline: none;
+    border: none;
 }
 
 .card-image{
@@ -42,6 +53,7 @@ body {
     grid-area: promotion-msg;
     text-align: center;
     padding: 0 30px;
+    vertical-align: middle;
 }
 
 .plan-card{
@@ -55,6 +67,7 @@ body {
     "Icon plan-pricing select-link";
     border-radius: 15px;
     background-color: hsl(224, 23%, 55%);
+    align-self: center;
 }
 
 .plan-card .plan-icon{
@@ -79,10 +92,14 @@ body {
 
 .payment-btn{
     grid-area: payment-btn;
+    background-color: hsl(223, 47%, 23%);
+    border-radius: 10px;
 }
 
 .cancel-btn{
     grid-area: cancel-btn;
+    background-color: white;
+    border-radius: 10px;
 }
 
 @media (max-width:600px)
